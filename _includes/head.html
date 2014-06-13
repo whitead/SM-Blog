@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
     <!-- MathJax https version -->
+    {% if page.js-libraries contains 'mathjax' %}
     <script type="text/javascript"
 	    src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
+    {% endif %}
+
+    {% if page.js-libraries contains 'd3' %}
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    {% endif %}
 
 </head>
