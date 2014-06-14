@@ -1,7 +1,7 @@
 # Site settings
 title: Science & Math blog
 email: andrew@andrew-white.com
-description: "A blog devoted to the glorious pursuit of mathsci"
+description: "A blog devoted to the glorious pursuit of mathsci."
 baseurl: ""
 url: "http://whitead.github.io/SM-Blog"
 timezone: America/Chicago

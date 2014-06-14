@@ -2,6 +2,7 @@
 layout: post
 title:  "Test Page"
 date:   2014-06-10 17:24:23
+abstract: "A page demonstrating a few of the features in the blog"
 categories: test
 js-libraries: mathjax d3
 ---
