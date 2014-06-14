@@ -6,16 +6,16 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Bootstrap -->
-    {% include bootstrap.js.html %}
-    <link rel="stylesheet" type="text/css" href="{{ "/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}"/>
-    
-
     <!-- Jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    {% include bootstrap.js.html %}
+    <link rel="stylesheet" type="text/css" href="{{ "/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}"/>
+    
 
     <!-- MathJax https version -->
     {% if page.js-libraries contains 'mathjax' %}
