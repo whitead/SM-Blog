@@ -1,23 +1,25 @@
-<footer class="site-footer">
+<div id="footer" class="footer">
 
-  <div class="wrap">
+  <div class="container">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <h2>{{ site.title }}</h2>
 
-    <div class="footer-col-1 column">
-      <ul>
-        <li>{{ site.title }}</li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      </ul>
+    <div class="row text-muted">
+      <div class="col-md-4">
+	<ul>
+          <li>{{ site.title }}</li>
+          <li>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+	</ul>
+      </div>
+      
+      <div class="col-md-4">
+      </div>
+      
+      <div class="col-md-4">
+	<p class="text">{{ site.description }}</p>
+      </div>
     </div>
-
-    <div class="footer-col-2 column">
-    </div>
-
-    <div class="footer-col-3 column">
-      <p class="text">{{ site.description }}</p>
-    </div>
-
+    
   </div>
-
-</footer>
+  
+</div>

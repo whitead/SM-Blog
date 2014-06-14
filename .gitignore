@@ -65,3 +65,4 @@ bootstrap/less/type.less
 bootstrap/less/utilities.less
 bootstrap/less/variables.less
 bootstrap/less/wells.less
+bootstrap/css/bootstrap.min.css
