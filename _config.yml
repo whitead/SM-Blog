@@ -1,5 +1,6 @@
 # Site settings
 title: Science & Math blog
+author: Andrew White
 email: andrew@andrew-white.com
 description: "A blog devoted to the glorious pursuit of mathsci."
 baseurl: ""
