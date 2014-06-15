@@ -12,10 +12,10 @@ layout: default
     </div>
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at ligula dictum, tristique elit vitae, iaculis mauris. Morbi consectetur libero sagittis, semper nulla consectetur, cursus est. Pellentesque sit amet nibh odio. Donec non risus est.</p>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-xs-6">
 	<a class="btn btn-default btn-lg" href="{{ "/post_list" | prepend: site.baseurl }}"> All Posts </a>
       </div>
-      <div class="col-md-6">
+      <div class="col-xs-6">
 	<a class="btn btn-default btn-lg pull-right" href="{{ "/feed.xml" | prepend: site.baseurl }}"> Subscribe via RSS </a>
       </div>
     </div>
@@ -34,6 +34,11 @@ layout: default
             {% else %}
                 {{ post.content | strip_html | truncatewords: 100 }}
 	    {% endif %}
+	    <div class="read-more-btn">
+	      <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default"> 
+		Read Post <span class="glyphicon glyphicon-chevron-right"></span>
+	      </a>
+	    </div>
           </div>
        {% endfor %}
   </div>
@@ -41,11 +46,6 @@ layout: default
   <div class="row">
       {% for post in site.posts limit:3 %}
           <div class="post-content-truncate col-md-4">
-	    <div class="pull-right">
-	      <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default"> 
-		Read Post <span class="glyphicon glyphicon-chevron-right"></span>
-	      </a>
-	    </div>
           </div>
 
        {% endfor %}
