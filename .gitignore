@@ -23,6 +23,8 @@ coverage
 #bootstrap
 _includes/bootstrap.js.html
 bootstrap/js/
+bootstrap/css/
+bootstrap/fonts/
 bootstrap/less/alerts.less
 bootstrap/less/badges.less
 bootstrap/less/bootstrap.less
@@ -65,4 +67,3 @@ bootstrap/less/type.less
 bootstrap/less/utilities.less
 bootstrap/less/variables.less
 bootstrap/less/wells.less
-bootstrap/css/bootstrap.min.css

@@ -55,7 +55,11 @@ task :bootstrap_css do |t|
     target = File.join('bootstrap/less/mixins', File.basename(source))
     cp source, target if different?(source, target)
   end
-
+  puts "Copying fonts"
+  Dir.glob(File.join(BOOTSTRAP_SOURCE, 'fonts', '*')).each do |source|
+    target = File.join('bootstrap/fonts', File.basename(source))
+    cp source, target if different?(source, target)
+  end
 
   puts "Compiling #{BOOTSTRAP_CUSTOM_LESS}"
   sh 'lessc', '--compress', BOOTSTRAP_CUSTOM_LESS, 'bootstrap/css/bootstrap.min.css'
