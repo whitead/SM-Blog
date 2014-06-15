@@ -29,7 +29,13 @@ layout: default
             {% else %}
                 {{ post.content | strip_html | truncatewords: 100 }}
 	    {% endif %}
+          </div>
+       {% endfor %}
+  </div>
 
+  <div class="row">
+      {% for post in site.posts limit:3 %}
+          <div class="post-content-truncate col-md-4">
 	    <div class="pull-right">
 	      <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default"> 
 		Read Post <span class="glyphicon glyphicon-chevron-right"></span>
@@ -39,6 +45,7 @@ layout: default
 
        {% endfor %}
    </div>
+
 
 <!--  <ul class="posts"> -->
 <!--    {% for post in site.posts %} -->
