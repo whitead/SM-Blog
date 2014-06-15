@@ -19,6 +19,16 @@ p {
   font-family: @font-family-serif;
 }
 
+.post-table { 
+  > tbody {	    
+    > tr {
+       > td {
+        padding: (@table-cell-padding) / 2;
+        line-height: @line-height-base;
+       }
+     }
+  }
+}
 
 .post code {
   border: 1px solid #d5d5e9;

@@ -7,13 +7,14 @@ layout: default
     <div class="page-header">
       <h1>{{ site.name }} Posts</h1>
     </div>
-    <ul class="posts">
+      <table class="post-table">
       {% for post in site.posts %}
-      <li>
-	<span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
-	<span class="h4"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
-      </li>
+	<tr>
+	  <td>•</td>
+	  <td><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
+	  <td><span class="h4"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span></td> 
+	</tr>
       {% endfor %}
-    </ul>
+      </table>
   </div>
 </div>
