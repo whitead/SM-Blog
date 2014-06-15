@@ -11,7 +11,7 @@ layout: default
       {% for post in site.posts %}
 	<tr>
 	  <td>•</td>
-	  <td><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
+	  <td><span class="text-muted text-nowrap">{{ post.date | date: "%b %-d, %Y" }}</span></td>
 	  <td><span class="h4"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span></td> 
 	</tr>
       {% endfor %}
