@@ -11,8 +11,12 @@ task :jekyll => :bootstrap do
   sh 'jekyll build'
 end
 
+task :build_dir do
+  sh 'mkdir -p bootstrap/js bootstrap/fonts bootstrap/less bootstrap/css'
+end
+
 #bootstrap compile and minify
-task :bootstrap => [:bootstrap_js, :bootstrap_css]
+task :bootstrap => [:bootstrap_js, :bootstrap_css, :build_dir]
 
 task :bootstrap_js do
   require 'uglifier'
