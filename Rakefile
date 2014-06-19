@@ -22,10 +22,15 @@ task :bootstrap_js do
   require 'uglifier'
   require 'erb'
 
+  #get server baseurl
+  require 'yaml'
+  config = YAML.load_file('_config.yml')
+  
+
   template = ERB.new %q{
   <!-- AUTOMATICALLY GENERATED. DO NOT EDIT. -->
   <% paths.each do |path| %>
-  <script type="text/javascript" src="/bootstrap/js/<%= path %>"></script>
+  <script type="text/javascript" src="<%= config['baseurl']%>/bootstrap/js/<%= path %>"></script>
   <% end %>
   }
 

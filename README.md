@@ -54,4 +54,5 @@ the website. Re-run rake eachtime you modify this file.
 Custom Site-URL
 =========================
 
-TODO
+Custom baseurls can be added only to `_config.yml` and the Rakefile
+will read and process it as needed.
