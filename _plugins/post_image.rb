@@ -47,12 +47,12 @@ module Jekyll
       #get root
       basename = @filename.chomp(File.extname(@filename))
       #fix double slashes
-      link_path = "#{base}/assets/img/#{path}/#{@filename}".gsub(/\/{2,}/, '/')
-      preview_path = "#{base}/assets/img/#{path}/#{basename}_preview.jpg".gsub(/\/{2,}/, '/')
+      link_path = base + "/assets/img/#{path}/#{@filename}".gsub(/\/{2,}/, '/')
+      preview_path = base  + "/assets/img/#{path}/#{basename}_preview.jpg".gsub(/\/{2,}/, '/')
       
       #now create output
       html = '<a href="' + link_path + '" class="thumbnail post-image-link">'
-      html += '<img class="img-responsive post-image"  src="' + preview_path + '" alt="">'
+      html += '<img class="img-responsive"  src="' + preview_path + '" alt="">'
       html += '</a>'
 
       html
