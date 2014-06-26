@@ -52,7 +52,7 @@ module Jekyll
       
       #now create output
       html = '<a href="' + link_path + '" class="thumbnail post-image-link">'
-      html += '<img class="img-responsive"  src="' + preview_path + '" alt="">'
+      html += '<img class="post-image img-responsive"  src="' + preview_path + '" alt="">'
       html += '</a>'
 
       html

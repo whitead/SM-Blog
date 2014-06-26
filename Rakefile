@@ -11,7 +11,7 @@ THUMBNAIL_STRING = ' -resize 150 '
 
 task :default => :jekyll
 
-task :jekyll => :bootstrap do
+task :jekyll => [:bootstrap, :process_images] do
   sh 'jekyll build'
 end
 
@@ -21,7 +21,10 @@ end
 
 task :process_images do
   Dir.entries(IMG_DIR).each do |img_dir|
-    puts "Converting pngs in" + img_dir
+    if img_dir == '.' or img_dir == '..'
+      next
+    end
+    puts "Converting pngs in " + img_dir
     Dir.glob(File.join(IMG_DIR, img_dir, '*.png')).each do |png_img|
       jpg_filename = png_img.chomp(File.extname(png_img)) + '.jpg'
       if not File.exists?(jpg_filename)
