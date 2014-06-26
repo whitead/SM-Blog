@@ -20,6 +20,10 @@ coverage
 #emacs
 *~
 
+#images
+*_preview.jpg
+*_thumb.jpg
+
 #bootstrap
 _includes/bootstrap.js.html
 bootstrap/js/
