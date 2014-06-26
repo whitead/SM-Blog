@@ -24,17 +24,17 @@ layout: default
   <div class="row">
       {% for post in site.posts limit:3 %}
           <div class="post-content-truncate col-md-4">
-	    <h2> {{ post.title }} </h2>
+	    <h2> <a href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a> </h2>
 	    {%if page.abstract %}
 	        <h4> {{ page.abstract }} </h4>
-	    {% endif %}
+		{% endif %}
 	    <p class="text-muted">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 	    {% if post.content contains "<!-- more -->" %}
                 {{ post.content | split:"<!-- more -->" | first %}}
             {% else %}
                 {{ post.content | strip_html | truncatewords: 100 }}
 	    {% endif %}
-	    <div class="read-more-btn">
+	    <div>
 	      <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default"> 
 		Read Post <span class="glyphicon glyphicon-chevron-right"></span>
 	      </a>
