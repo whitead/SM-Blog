@@ -11,12 +11,12 @@ THUMBNAIL_STRING = ' -resize 150 '
 
 task :default => :jekyll
 
-task :jekyll => [:bootstrap, :process_images] do
+task :jekyll => [:build_dir, :bootstrap, :process_images] do
   sh 'jekyll build'
 end
 
 task :build_dir do
-  sh 'mkdir -p bootstrap/js bootstrap/fonts bootstrap/less bootstrap/css'
+  sh 'mkdir -p bootstrap/js bootstrap/fonts bootstrap/less bootstrap/less/mixins bootstrap/css'
 end
 
 task :process_images do
